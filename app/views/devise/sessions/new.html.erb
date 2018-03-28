@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta content="utf-8"></meta>
+<meta name="viewport" content="width=device-width,initial-scale=1"></meta>
+<script src="/assets/bootstrap.min.js"></script>
+<script src="/assets/jquery.min.js"></script>
+<style src="/assets/bootstrap.min.css"></style>
+</head>
+
+<div class="container">
+  <div class="login-logo">
+    <a><b>Welcome to Leave Management System</b></a>
+  </div>
+    <h2>Log in</h2>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <label for="email">Email:</label><br/>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+     <div class="form-group">
+        <label for="password">Password:</label><br/>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+         <div class="form-group">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end -%>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
+      </div>
+    <% end %>
+    
+</html>
+<%= render "devise/shared/links" %>

@@ -1,0 +1,38 @@
+<%= form_for(@leavelog) do |f| %>
+  <% if @leavelog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@leavelog.errors.count, "error") %> prohibited this leavelog from being saved:</h2>
+
+      <ul>
+      <% @leavelog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="box box-primary">
+  <div class="container-fluid">
+  <div class="field">
+    <%= f.label :reason_for_leave %><br>
+    <%= f.text_field :reason_for_leave %>
+  </div>
+   
+  <div class="field">
+    <%= f.label :leave_date_from %><br>
+    <%= f.date_select :leave_date_from %>
+  </div>
+  <div class="field">
+    <%= f.label :leave_date_to %><br>
+    <%= f.date_select :leave_date_to %>
+  </div>
+  <%= hidden_field_tag :status, 'pending' %>
+ <br>
+   <input id="status" name="status" type="hidden" value="pending"/>
+    <input id="user_id" name="user_id" type="hidden" value="<%=current_user.id%>"/>
+  <div class="actions">
+    <br>
+    <%= f.submit%>
+  </div>
+<% end %>
+</div>
+</div>

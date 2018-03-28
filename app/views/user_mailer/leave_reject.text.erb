@@ -1,0 +1,3 @@
+Dear  <%= @user.first_name %> <%= @user.last_name %>
+		
+		your request for the Leave from:<%= @leavelog_reject.leave_date_from.strftime('%d-%m-%Y')%> to <%= @leavelog_reject.leave_date_to.strftime('%d-%m-%Y')%> is rejected by Admin.

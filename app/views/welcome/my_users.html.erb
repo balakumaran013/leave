@@ -1,0 +1,33 @@
+<% if @users.count != 0%>
+  <div class="box box-primary">
+    <div class="box-header">
+      <h3 class="box-title">My Users</h3>
+    </div><!-- /.box-header -->
+     <%= link_to "Back", "/welcome/#index",class: "btn btn-primary"%></br></br>
+    <div class="box-body">
+      <table id="example1" class="table table-striped">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Mobile No</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |f|%>
+            <tr>
+              <td><%= f.first_name%></td>
+              <td><%= f.last_name%></td>
+              <td><%= f.email%></td>
+              <td><%= f.mobile_no%></td>
+                  
+               <td></td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+
+    </div><!-- /.box-body -->
+  </div><!-- /.box -->  
+<% end%>

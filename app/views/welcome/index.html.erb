@@ -1,0 +1,26 @@
+<%if current_user%>
+  <table align="right">
+
+<%if current_user.is_admin == 1%>
+<tr>
+      <td>
+        <strong>
+             <font size="3"><a href="/my_users"><i></i> <span>My Registered Users</span></a></font>
+        </strong>
+      </td>
+    </tr>
+<%else%>
+<tr>
+      <td>
+        <strong>
+       <%= link_to "Apply For Leave", "/leavelogs/new",class: "btn btn-primary"%></br></br>
+         </strong>
+      </td>
+    </tr>
+
+<%end%>
+</table>
+<td>
+        <strong><%#= link_to 'Add Admin', users_new_path%> </strong>
+      </td>
+<%end%>

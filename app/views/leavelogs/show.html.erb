@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reason for leave:</strong>
+  <%= @leavelog.reason_for_leave %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @leavelog.status %>
+</p>
+
+<p>
+  <strong>Leave date from:</strong>
+  <%= @leavelog.leave_date_from %>
+</p>
+
+<p>
+  <strong>Leave date to:</strong>
+  <%= @leavelog.leave_date_to %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @leavelog.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_leavelog_path(@leavelog) %> |
+<%= link_to 'Back', leavelogs_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reason_for_leave: MyString
+  status: MyString
+  leave_date_from: 2018-03-27
+  leave_date_to: 2018-03-27
+  user_id: 1
+
+two:
+  reason_for_leave: MyString
+  status: MyString
+  leave_date_from: 2018-03-27
+  leave_date_to: 2018-03-27
+  user_id: 1
